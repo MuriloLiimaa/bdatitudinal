@@ -1,0 +1,58 @@
+ CREATE TABLE Musicas (
+    id int PK
+    caminho VARCHAR
+    titulo VARCHAR(255)
+    duracao TIME
+    data_postagem DATE
+    cantor VARCHAR(255)
+    compositor VARCHAR(255)
+    poster VARCHAR(255)
+
+)
+
+ CREATE TABLE Artistas (
+    id int PK
+    nome VARCHAR(255)
+    data_nascimento DATE
+    data_falecimento DATE
+    tipo VARCHAR
+    biografia TEXT
+    musicas_mais_conhecidas TEXT
+    }
+
+ TABLE Compositores (
+    id int PK
+    nome VARCHAR(255)
+    data_nascimento DATE
+    data_falecimento DATE
+    tipo VARCHAR(50)
+    biografia TEXT
+    musicas_mais_conhecidas TEXT
+    )
+
+ Table Usuarios (
+    id int PK
+    email VARCHAR(255) UNIQUE
+    senha VARCHAR(255)
+    nome_completo VARCHAR(255)
+    idade INT
+    generos_preferidos VARCHAR(255)
+    data_criacao_perfil DATE
+    ultimo_acesso_app DATETIME
+    celular VARCHAR(20)
+    plano VARCHAR(50)
+)
+
+
+
+
+
+Ref: "Artistas"."id" < "Musicas"."id"
+
+Ref: "Usuarios"."id" < "Musicas"."id"
+
+
+Ref: "Compositores"."id" < "Musicas"."id"
+
+
+                           
